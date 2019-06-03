@@ -1,18 +1,18 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: la-canary
+  name: kpn-canary
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: la-app
+        app: kpn-app
         track: canary
         version: 1.0.0
     spec:
       containers:
-        - name: la-canary
+        - name: kpn-canary
           image: linuxacademycontent/content-gcp-labs:deploy-canary
           ports:
             - name: http

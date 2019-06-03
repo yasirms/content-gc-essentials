@@ -1,18 +1,18 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: la-stable
+  name: kpn-stable
 spec:
   replicas: 4
   template:
     metadata:
       labels:
-        app: la-app
+        app: kpn-app
         track: stable
         version: 1.0.0
     spec:
       containers:
-        - name: la-stable
+        - name: kpn-stable
           image: linuxacademycontent/content-gcp-labs:deploy-stable
           ports:
             - name: http
